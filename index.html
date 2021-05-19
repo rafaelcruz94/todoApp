@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/a560377048.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo App : Rafael</title>
+  </head>
+  <body>
+    <main>
+      <h1><i class="fas fa-stream"></i> Todo App</h1>
+      <div id="date"></div>
+      <div class="search">
+        <input
+          type="text"
+          id="myInput"
+          onkeyup="myFunction()"
+          placeholder="Search for tasks..."
+          autocomplete="off"
+        />
+        <button id="clearButton">Delete All</button>
+      </div>
+      <header>
+        <p>Progress bar <i class="fas fa-sort-down"></i></p>
+        <div id="percentage">
+          <span style="width: calc(0%)"></span>
+          <span></span>
+        </div>
+      </header>
+
+      <section class="container">
+        <ul id="list"></ul>
+
+        <form id="new-todo-form">
+          <div class="task">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Type a new task..."
+              autocomplete="off"
+            />
+            <button class="new-todo" type="submit">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <template id="list-item-template">
+        <li class="list-item">
+          <label class="list-item-label">
+            <input type="checkbox" id="checkbox" />
+            <span id="item-text"></span>
+          </label>
+          <button id="delete"><i class="far fa-trash-alt"></i></button>
+          <button id="edit"><i class="fas fa-edit"></i></button>
+        </li>
+      </template>
+    </main>
+  </body>
+</html>
